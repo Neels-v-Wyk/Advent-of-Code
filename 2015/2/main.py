@@ -19,9 +19,13 @@ for boxes in f:
 
     individual_surfaces = [wl, wh, lh]
     individual_surfaces.sort() # make sure smallest element is always first
-    print(individual_surfaces)
 
-    surface_area = (2*individual_surfaces[0]) + individual_surfaces[1] + individual_surfaces[2]
+
+    surface_area = 3*individual_surfaces[0]/2 + individual_surfaces[1] + individual_surfaces[2]
+    # 3*individual_surfaces[0]/2
+    # i + i/2 = 3i/2
+    # account for the fact that the smallest side is already *2
+    
     total_surface_area = total_surface_area + surface_area
 
 print(total_surface_area)
